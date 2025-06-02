@@ -8,26 +8,8 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
-        compilations.all {
-            compileTaskProvider.configure {
-                compilerOptions {
-                    jvmTarget.set(JvmTarget.JVM_1_8)
-                }
-            }
-        }
-    }
-    
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "theme-core"
-            isStatic = true
-        }
-    }
+    androidTarget()
+    jvm()
 
     sourceSets {
         androidMain.dependencies {
