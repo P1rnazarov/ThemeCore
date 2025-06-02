@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Theme_Core"
-include(":shared")
+include(":theme")
